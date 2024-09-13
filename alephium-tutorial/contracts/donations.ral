@@ -1,0 +1,37 @@
+
+// create contract:
+Contract Donations() {
+    
+    mapping [Address, U256] donors
+
+    event Donation(donor: Address, recipient: Address, amount: U256)
+
+    enum ErrorCodes {
+        InsufficientAmount = 0
+    }
+
+    @using(preapprovedAssets = true, checkExternalCaller = false)
+    pub fn depositTouser(recipient: Address, amount: U256 ) -> () {
+        assert!(amount > 0, ErrorCodes.InsufficientAmount)
+        
+        let caller = callerAddress!()
+    
+        if (donors.contains!(recipient)) {
+                donors[recipient] = donors[recipient] + amount
+        } else {
+                donors.insert!(caller, recipient, amount)
+        }
+
+        emit Donation(caller, recipient, amount)
+    }
+
+
+   pub fn getDonorTotal( donor: Address ) -> U256 {
+        if (donors.contains!(donor)) {
+            return donors[donor]
+        } else {
+            return 0
+        }
+    }
+
+}

@@ -1,0 +1,20 @@
+{
+  "fullNodeVersion": "v3.6.2",
+  "compilerOptionsUsed": {
+    "ignoreUnusedConstantsWarnings": false,
+    "ignoreUnusedVariablesWarnings": false,
+    "ignoreUnusedFieldsWarnings": false,
+    "ignoreUnusedPrivateFunctionsWarnings": false,
+    "ignoreUpdateFieldsCheckWarnings": false,
+    "ignoreCheckExternalCallerWarnings": false,
+    "ignoreUnusedFunctionReturnWarnings": false
+  },
+  "infos": {
+    "Donations": {
+      "sourceFile": "donations.ral",
+      "sourceCodeHash": "863be3629498848dad0dae935be71424408765bcc46649f88256fdb790db8876",
+      "bytecodeDebugPatch": "=6-2+95=2-2+cf=13-1+5=165-1+c=40+7a7e0214696e73657274206174206d617020706174683a2000=144",
+      "codeHashDebug": "3e375ba16f5597393ea017c1ef8e3112281bd62f057e96fc842143b55fed3630"
+    }
+  }
+}
